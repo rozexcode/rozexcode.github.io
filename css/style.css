@@ -1,0 +1,384 @@
+:root {
+  --bg-color: #dcdcdc;
+  --main-bg-color: #fff;
+  --main-text-color: #454545;
+  --footer-bg-color: #333333;
+  --footer-text-color: #888888;
+  --footer-link-active: #cc8900;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-color);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--main-text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+.container {
+  /* position: relative; */
+  /* height: 100vh; */
+}
+
+/* nav --------------------------*/
+
+nav {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 0px;
+  background-color: var(--main-bg-color);
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 700;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+.menu {
+  list-style-type: none;
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.menu li {
+  display: block;
+  width: 200px;
+  position: relative;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu__main-link {
+  transition: color 0.2s;
+}
+
+.menu li:hover .menu__main-link {
+  color: var(--footer-link-active);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  padding: 0;
+  z-index: 9999;
+}
+
+.menu li.dropdown:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  display: block;
+  border-top: 1px solid #fff;
+  background-color: #ccc;
+  padding: 5px 0 5px 0;
+  transition: background-color 0.2s;
+}
+
+.submenu li a {
+  display: block;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.menu li:hover > a {
+  color: var(--footer-link-active);
+}
+
+.submenu li:hover > a {
+  color: #fff;
+}
+.submenu li:hover {
+  background-color: var(--footer-bg-color);
+}
+
+/* burger ------------------------- */
+
+.burger {
+  font-size: 30px;
+  color: var(--main-text-color);
+  display: none;
+  margin-left: 30px;
+}
+
+/* footer ------------------ */
+
+footer {
+  background-color: var(--footer-bg-color);
+  /* color: var(--main-text-color); */
+  color: var(--footer-text-color);
+  font-size: 500;
+  padding: 1.1rem 0 1.1rem 0;
+  width: 100vw;
+  max-width: 100%;
+  bottom: 0;
+}
+
+.footer__item > a {
+  color: #fff;
+}
+
+.footer__container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__item--fb {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  transition: background-color 0.2s linear;
+}
+
+.footer__item--fb > i {
+  font-size: 1rem;
+  color: var(--footer-bg-color);
+  transition: color 0.2s linear;
+}
+
+.footer__item--fb:hover {
+  background-color: var(--footer-link-active);
+}
+
+.footer__item--fb:hover > i {
+  color: white;
+}
+
+/* content ------------------------ */
+
+.content {
+  max-width: 1040px;
+  margin: 97px auto 0 auto;
+}
+section {
+  background-color: var(--main-bg-color);
+  margin-top: 5px;
+  padding: 50px;
+  padding-bottom: 100px;
+}
+
+/* SLIDER */
+
+#slider {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  padding: 0;
+}
+.slider {
+  max-width: 1040px;
+  margin-top: 90px;
+  position: relative;
+  overflow: hidden;
+  padding: 20%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s;
+}
+
+.slide > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.slider {
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slider--btn {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  opacity: 1;
+  border-radius: 50%;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.slider:hover .slider--btn {
+  opacity: 0.8;
+}
+
+#next {
+  position: absolute;
+  right: 2.5vw;
+}
+
+#prev {
+  position: absolute;
+  left: 2.5vw;
+}
+
+/* goToTop -------------------*/
+
+#goToTopBtn {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 20px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: var(--main-text-color);
+  color: #fff;
+  cursor: pointer;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
+#goToTopBtn:hover {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+  }
+
+  .footer__item--fb {
+    margin-top: 20px;
+  }
+
+  .content {
+    margin-top: 64px !important;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    background-color: var(--footer-text-color);
+  }
+
+  .menu-active {
+    display: flex;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu li a {
+    color: white;
+    font-weight: 300;
+  }
+
+  .menu li a:hover {
+    color: white;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .menu li.dropdown:hover .submenu li:hover {
+    background-color: var(--footer-link-active);
+  }
+
+  .menu li.dropdown .submenu {
+    position: static;
+    display: none;
+    width: 100%;
+    background-color: var(--main-bg-color);
+    border-top: 1px solid #ccc;
+  }
+
+  .menu li.dropdown:hover .submenu {
+    display: block;
+  }
+
+  .menu li.dropdown .submenu li {
+    width: 100%;
+    border-top: none;
+    background-color: #ccc;
+    padding: 5px 0;
+  }
+
+  .slider {
+    margin-top: 60px;
+  }
+}

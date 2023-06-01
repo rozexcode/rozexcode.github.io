@@ -1,1 +1,164 @@
-"hello world" 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/content-index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="burger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="menu">
+          <li><a href="#" class="menu__main-link">STARTSEITE</a></li>
+          <li class="dropdown">
+            <a href="#" class="menu__main-link">HOLZHAUS</a>
+            <ul class="submenu">
+              <li><a href="#">Blockstammhaus</a></li>
+              <li><a href="#">Gartenhaus</a></li>
+              <li><a href="#">Blockstammhaus Sauna</a></li>
+              <li><a href="#">Naturstammhaus</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu__main-link">GARTENMOBEL</a>
+            <ul class="submenu">
+              <li><a href="#">Gartenmöbel Holz</a></li>
+              <li><a href="#">Terrassenmöbel</a></li>
+              <li><a href="#">Gartenmöbel Set</a></li>
+              <li><a href="#">Gartenmöbel Galerie</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="menu__main-link">PAVILLON</a>
+            <ul class="submenu">
+              <li><a href="#">Dropdown Item 1</a></li>
+              <li><a href="#">Dropdown Item 2</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="menu__main-link">REFERENZEN</a></li>
+          <li><a href="#" class="menu__main-link">ANFRAGE</a></li>
+        </ul>
+      </nav>
+
+      <div class="content">
+
+        <div class="slider">
+          <div class="slide active">
+            <img src="img/slider3_optimized.jpg" alt="Slide 3">
+          </div>
+          <div class="slide">
+            <img src="img/slider_optimized.jpg" alt="Slide 1">
+          </div>
+          
+          
+
+          <div id="next" class="slider--btn" onclick="changeSlide(-1)"><i class="fa-sharp fa-solid fa-arrow-right"></i></div>
+          <div id="prev" class="slider--btn" onclick="changeSlide(1)"><i class="fa-sharp fa-solid fa-arrow-right fa-rotate-180"></i></div> 
+        </div>
+
+        <section>
+         
+          <h1>
+            Naturstammhaus, Holzhaus, Gartenpavillon, Gartenmöbel Holz Rustikal,
+            Blockstammhaus aus handgefertigten Naturholzstämmen aus Polen nur
+            bei Naturstammhaus.Online
+          </h1>
+
+          <p class="centered">
+            Naturstammhaus, Gartenpavillon, Gartenmöbel, Blockstammhaus,
+            Holzhaus aus Holzstämmen besteht aus handgefertigten
+            Naturholzstämmen aus Polen nur bei Naturstammhaus.Online
+          </p>
+          <br><br>
+          <a href="#">Sehen Sie Filme aus unseren Projekten</a>
+
+          <a href="#"><h2>Haus aus Holzstämmen</h2></a>
+
+          <p>
+            Der Bau von Häusern aus Holzbalken wird unter Berücksichtigung der
+            individuellen Merkmale der zukünftigen Konstruktion vorgenommen.
+          </p>
+          <br><br>
+          <a href="#">Weiterlesen</a>
+
+          <div class="content-img">
+           <img src="img/content-index/index1.jpg" alt="Haus aus Holzstämmen">
+           Haus aus Holzstämmen
+          </div>
+
+          <div class="content-img">
+           <img src="img/content-index/index2.jpg" alt="Gartenpavillon mit Reetdach aus Polen in Schönebeck">
+           Gartenpavillon mit Reetdach aus Polen in Schönebeck
+          </div>
+
+          <a href="#"><h2>Gartenpavillon mit Reetdach aus Polen</h2></a>
+          
+          <p class="centered"> Lasen Sie sich überzeugen und schauen Sie weiter. Wunderschöne Pavillon aus Natur Stammholz und da zu Bedecken mit Reetdach. Das Qualität ist unsere Domäne</p>
+
+          <br><br>
+          <a href="#">Weiterlesen</a>
+
+          <a href="#"><h2>Gartenmöbel aus Polen</h2></a>
+
+          <p>
+            Das Wunderschöne Gartenmöbel bieten wir an. Rund oder rechteckig
+            Rustikal aus Holz. Die beste Verarbeitung und Qualität. Lasen Sie
+            sich überzeugen
+          </p>
+
+          <br><br>
+          <a href="#">Weiterlesen</a>
+
+          <div class="content-img">
+            <img src="img/content-index/index3.jpg" alt="Gartenmöbel rund Rustikal aus Polen">
+            Gartenmöbel rund Rustikal aus Polen
+           </div>
+
+           <h2>Eines unserer Projekte</h2>
+
+           <div id="videoContainer">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/jm0ouORZAbs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </section>
+        
+      </div>
+      
+      <button onclick="goToTop()" id="goToTopBtn">
+        <i class="fa-solid fa-chevron-up"></i>
+      </button>
+    </div>
+      <footer>
+        <div class="footer__container">
+          <div class="footer__item footer__item--copyright">
+            © Copyright 2023 Patryk Rozpędek, Icons by
+            <a target="_blank" href="https://fontawesome.com/">Font Awesome</a>
+          </div>
+
+          <a href="#" target="_blank">
+            <div class="footer__item footer__item--fb">
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+          </a>
+        </div>
+      </footer>
+    </div>
+    <script src="script/nav.js"></script>
+    <script src="script/slider.js"></script>
+    <script src="script/goToTop.js"></script>
+  </body>
+</html>
